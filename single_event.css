@@ -163,15 +163,15 @@ header .flexslider .slide {
 }
 
 header .flexslider .one {
-  background-image: url("/images/slider/slide_1.jpg");
+  background-image: url("./images/slider/slide_1.jpg");
 }
 
 header .flexslider .two {
-  background-image: url("/images/slider/slide_2.jpg");
+  background-image: url("./images/slider/slide_2.jpg");
 }
 
 header .flexslider .three {
-  background-image: url("/images/slider/slide_3.jpg");
+  background-image: url("./images/slider/slide_3.jpg");
 }
 
 header .flexslider .text {

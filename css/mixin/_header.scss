@@ -86,13 +86,13 @@ header {
             background-size: cover;
         }
         .one {
-            background-image: url('/images/slider/slide_1.jpg');
+            background-image: url('./images/slider/slide_1.jpg');
         }
         .two {
-            background-image: url('/images/slider/slide_2.jpg');
+            background-image: url('./images/slider/slide_2.jpg');
         }
         .three {
-            background-image: url('/images/slider/slide_3.jpg');
+            background-image: url('./images/slider/slide_3.jpg');
         }
         .text {
             position: absolute;
