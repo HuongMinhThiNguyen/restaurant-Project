@@ -1,0 +1,74 @@
+#menu {
+    width: 100vw;
+    height: auto;
+}
+
+.container-menu {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em;
+    .button-group {
+        padding: 2rem 0;
+        .btn {
+            display: inline-block;
+            margin: 0 0 30px;
+            vertical-align: top;
+            @include buttonTwo;
+        }
+        .btn:hover,
+        .btn:focus {
+            background-color: darkgray;
+            color: white;
+            border: 1px solid black;
+        }
+    }
+    h2 {
+        @include h2;
+        color: darken( orange, 20);
+        font-size: 5rem;
+    }
+    h1 {
+        @include h1;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: black;
+    }
+    .mix-container {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu {
+        margin: 1rem;
+        .responsive {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .price {
+            color: darken(orange, 20);
+            font-size: 1.2rem;
+            letter-spacing: 1.0px;
+            padding: 1rem;
+        }
+        p {
+            @include fontTwo;
+            padding: 1rem;
+            font-weight: 700;
+            position: relative;
+            // border-bottom: 1px solid grey;
+        }
+        p::after {
+            background: lightslategrey;
+            content: "";
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 33%;
+            width: 33%;
+        }
+    }
+}

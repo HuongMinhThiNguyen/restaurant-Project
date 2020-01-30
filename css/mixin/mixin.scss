@@ -1,0 +1,73 @@
+        @mixin a_style {
+            list-style: none;
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit;
+        }
+        
+        @mixin position_set {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+        @mixin fontOne {
+            font-family: 'Herr Von Muellerhoff', cursive;
+        }
+        
+        @mixin fontTwo {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        @mixin h2 {
+            font-family: 'Herr Von Muellerhoff', cursive;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.3rem;
+        }
+        
+        @mixin h1 {
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 0.2rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        @mixin button {
+            // height: 100%;
+            // display: block;
+            padding: 1rem;
+            text-transform: uppercase;
+            background-color: darkgoldenrod;
+            color: whitesmoke;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            padding: 1rem;
+            font-size: 0.8rem;
+        }
+        
+        @mixin buttonTwo {
+            background-color: white;
+            padding: 1rem;
+            text-transform: uppercase;
+            color: darkgoldenrod;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            border: 1px solid;
+            transition: 0.3s;
+        }
+        
+        @mixin span ($font-size) {
+            font-family: 'Herr Von Muellerhoff', cursive;
+            font-size: $font-size;
+            color: darkgoldenrod;
+            text-transform: none;
+            border-bottom: solid darkgoldenrod;
+        }

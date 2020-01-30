@@ -1,0 +1,101 @@
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                html {
+                    scroll-behavior: smooth;
+                    height: 100%;
+                }
+                
+                // styles in general
+                a {
+                    transition: 0.3s;
+                    color: #212324;
+                }
+                
+                a:hover {
+                    color: #c1934c;
+                }
+                
+                a:focus,
+                a:hover {
+                    outline: 0 solid;
+                    text-decoration: none;
+                }
+                
+                @import './mixin/mixin.scss';
+                // START WITH HEADER SECTION
+                @import './mixin/header';
+                // START WITH ABOUT SECTION
+                @import './mixin/about';
+                // START WITH PROMO'S SECTION
+                @import './mixin/promo';
+                // START WITH SECTION MENU
+                @import './mixin/menu';
+                // START WITH SECTION EVENT
+                @import'./mixin/event';
+                // START WITH SECTION FOOTER
+                @import'./mixin/footer';
+                // RESPONSIVE MEDIA
+                @media screen and (max-width: 980px) {
+                    .event {
+                        width: 100vw;
+                        padding-top: 2rem;
+                        max-width: 100%;
+                        position: relative;
+                        .img-event {
+                            width: 100vw;
+                        }
+                        .date {
+                            border: 1px solid red;
+                            position: absolute;
+                            top: 25%;
+                            left: 12%;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            color: white;
+                            width: 6rem;
+                            height: 6rem;
+                        }
+                    }
+                    .responsive {
+                        width: 60vw;
+                    }
+                }
+                
+                @media screen and (max-width: 400px) {
+                    .photoAbout {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .img-team {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .responsive {
+                        width: 70vw;
+                    }
+                    // section Event responsive
+                    .event {
+                        width: 100vw;
+                        padding-top: 2rem;
+                        position: relative;
+                        .img-event {
+                            width: 100vw;
+                            max-width: 100%;
+                        }
+                        .date {
+                            margin-top: -10rem;
+                            width: 6rem;
+                            height: 6rem;
+                            line-height: 70%;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            color: white;
+                            span {
+                                font-size: 0.8rem;
+                            }
+                            position: absolute;
+                            left: 5rem;
+                            bottom: 3vw;
+                        }
+                    }
+                }

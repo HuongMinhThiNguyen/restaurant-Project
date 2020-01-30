@@ -1,0 +1,163 @@
+header {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    margin: 0 auto;
+    .topbar {
+        // max-width: 70%;
+        flex-wrap: wrap;
+        padding: 0 2rem 0 2rem;
+        position: relative;
+        justify-content: space-between;
+        background: transparent;
+        margin: 0 auto;
+        color: whitesmoke;
+        display: flex;
+        .contactInf {
+            // flex-direction: column;
+            p {
+                margin-left: 1rem;
+                color: white;
+                font-family: Lato sans-serif;
+            }
+        }
+        .icons {
+            display: flex;
+            float: right;
+            // flex-direction: column-reverse;
+            ul {
+                font-size: 0.8rem;
+                margin: 0 auto;
+                padding-top: 1rem;
+            }
+            .btn {
+                @include button;
+            }
+        }
+    }
+    .sticky_navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border-top: 1px whitesmoke solid;
+        @include fontTwo;
+        letter-spacing: 2px;
+        font-weight: 900;
+        nav {
+            margin-top: 1rem;
+        }
+        &.sticky {
+            background-color: white;
+            color: black;
+        }
+    }
+    a {
+        @include a_style;
+    }
+    li {
+        display: inline;
+        list-style: none;
+        justify-content: space-between;
+        padding: 1rem;
+        color: inherit;
+    }
+    // start with slideshow
+    .flexslider {
+        display: flex;
+        @include position_set;
+        z-index: -1;
+        .slide-container {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+        .slide {
+            @include position_set;
+            color: whitesmoke;
+            margin: 0 auto;
+            text-align: center;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            background-position: center;
+            background-size: cover;
+        }
+        .one {
+            background-image: url('/images/slider/slide_1.jpg');
+        }
+        .two {
+            background-image: url('/images/slider/slide_2.jpg');
+        }
+        .three {
+            background-image: url('/images/slider/slide_3.jpg');
+        }
+        .text {
+            position: absolute;
+            justify-content: center;
+            margin: 0 auto;
+            bottom: 30%;
+            left: 5%;
+            right: 5%;
+            h2 {
+                @include fontOne;
+                font-size: 5rem;
+            }
+            h1 {
+                @include fontTwo;
+                text-transform: uppercase;
+                color: white;
+            }
+            .btn {
+                @include fontTwo;
+                text-transform: uppercase;
+                font-weight: 900;
+                border: 1px solid wheat;
+                letter-spacing: 3px;
+                padding: 0.5rem 1rem;
+                margin: 2rem 0;
+                font-weight: bold;
+                color: white;
+                background: transparent;
+                transition: 0.3s;
+                // opacity: 0.2;
+            }
+            .btn:focus-visible,
+            .btn:hover {
+                background-color: darkorange;
+            }
+        }
+    }
+    // start with control icons .controls {
+    //     position: relative;
+    //     text-align: right;
+    //     z-index: 1000;
+    //     ul {
+    //         list-style: none;
+    //         li {
+    //             display: inline-block;
+    //             width: 10px;
+    //             height: 10px;
+    //             margin: 3px;
+    //             background: #bdbdd5;
+    //             ;
+    //             cursor: pointer;
+    //         }
+    //         li.active {
+    //             background: #6a6a77;
+    //             ;
+    //         }
+    //     }
+    // }
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}

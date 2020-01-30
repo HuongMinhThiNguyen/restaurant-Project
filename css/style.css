@@ -1,0 +1,789 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #212324;
+}
+
+a:hover {
+  color: #c1934c;
+}
+
+a:focus,
+a:hover {
+  outline: 0 solid;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+header .topbar {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 2rem 0 2rem;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: transparent;
+  margin: 0 auto;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .topbar .contactInf p {
+  margin-left: 1rem;
+  color: white;
+  font-family: Lato sans-serif;
+}
+
+header .topbar .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+
+header .topbar .icons ul {
+  font-size: 0.8rem;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+header .topbar .icons .btn {
+  padding: 1rem;
+  text-transform: uppercase;
+  background-color: darkgoldenrod;
+  color: whitesmoke;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+header .sticky_navbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-top: 1px whitesmoke solid;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+header .sticky_navbar nav {
+  margin-top: 1rem;
+}
+
+header .sticky_navbar.sticky {
+  background-color: white;
+  color: black;
+}
+
+header a {
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+header li {
+  display: inline;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  color: inherit;
+}
+
+header .flexslider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+header .flexslider .slide-container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+header .flexslider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  color: whitesmoke;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  background-position: center;
+  background-size: cover;
+}
+
+header .flexslider .one {
+  background-image: url("/images/slider/slide_1.jpg");
+}
+
+header .flexslider .two {
+  background-image: url("/images/slider/slide_2.jpg");
+}
+
+header .flexslider .three {
+  background-image: url("/images/slider/slide_3.jpg");
+}
+
+header .flexslider .text {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  bottom: 30%;
+  left: 5%;
+  right: 5%;
+}
+
+header .flexslider .text h2 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 5rem;
+}
+
+header .flexslider .text h1 {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+header .flexslider .text .btn {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: 1px solid wheat;
+  letter-spacing: 3px;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .flexslider .text .btn:focus-visible,
+header .flexslider .text .btn:hover {
+  background-color: darkorange;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+.about .row {
+  width: 100vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 0 3rem;
+}
+
+.about .row .story {
+  justify-items: center;
+  padding-right: 10rem;
+}
+
+.about .row .story h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about .row .story h1 span {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 4rem;
+  color: darkgoldenrod;
+  text-transform: none;
+  border-bottom: solid darkgoldenrod;
+}
+
+.about .row .story p {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5rem;
+  padding: 3rem 0;
+  max-width: 680px;
+}
+
+.about .row .story .btn {
+  background-color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: darkgoldenrod;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  border: 1px solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.about .row .story .btn:hover {
+  background-color: #c1934c;
+  color: white;
+}
+
+.about .row .photos {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100vw;
+}
+
+.promo {
+  background-color: grey;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.promo .background-image {
+  background: rgba(0, 0, 0, 0) url(/images/promotions/promotions_area_bg_1.jpg) no-repeat fixed 0 0/cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.promo .background-image::after {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.promo h1,
+.promo h2,
+.promo h3,
+.promo .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.promo h2 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: #996300;
+  font-size: 5rem;
+}
+
+.promo h1 {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+.promo .container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.promo .special-row {
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 2em;
+  z-index: 1;
+}
+
+.promo .special {
+  padding: 1rem;
+  text-align: center;
+}
+
+.promo .special .img-team {
+  position: relative;
+}
+
+.promo .special .price {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.promo .special img {
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.promo .special h3 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.promo .special .btn {
+  background-color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: darkgoldenrod;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  border: 1px solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: transparent;
+  text-align: center;
+}
+
+.promo .special .btn:hover {
+  background-color: #c1934c;
+  color: white;
+}
+
+#menu {
+  width: 100vw;
+  height: auto;
+}
+
+.container-menu {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+}
+
+.container-menu .button-group {
+  padding: 2rem 0;
+}
+
+.container-menu .button-group .btn {
+  display: inline-block;
+  margin: 0 0 30px;
+  vertical-align: top;
+  background-color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: darkgoldenrod;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  border: 1px solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container-menu .button-group .btn:hover,
+.container-menu .button-group .btn:focus {
+  background-color: darkgray;
+  color: white;
+  border: 1px solid black;
+}
+
+.container-menu h2 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: #996300;
+  font-size: 5rem;
+}
+
+.container-menu h1 {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: black;
+}
+
+.container-menu .mix-container {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-menu .menu {
+  margin: 1rem;
+}
+
+.container-menu .menu .responsive {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.container-menu .menu .price {
+  color: #996300;
+  font-size: 1.2rem;
+  letter-spacing: 1.0px;
+  padding: 1rem;
+}
+
+.container-menu .menu p {
+  font-family: 'Raleway', sans-serif;
+  padding: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.container-menu .menu p::after {
+  background: lightslategrey;
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 33%;
+  width: 33%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(/images/event/event_-02.jpg);
+  padding: 2rem;
+}
+
+h2 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: #996300;
+  font-size: 5rem;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: black;
+}
+
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 0.6px solid lightgray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.event .date {
+  border: 1px solid black;
+  width: 120px;
+  height: 120px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.event .date span {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.event .inf {
+  max-width: 85%;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.event .img-event {
+  max-width: 100%;
+  height: auto;
+  float: right;
+  width: 30vw;
+}
+
+.event h5 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.event .underscore {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.event .underscore::after {
+  background-color: darkgoldenrod;
+  content: "";
+  height: 0.2rem;
+  width: 5rem;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  margin-top: 3rem;
+}
+
+.event .text {
+  letter-spacing: 1px;
+  padding-right: 3rem;
+}
+
+.container-footer {
+  border: 1px yellowgreen solid;
+  width: 100%;
+  height: 70vh;
+  overflow: none;
+  margin: 0 auto;
+  padding-top: 3rem;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: whitesmoke;
+  text-decoration: none;
+  line-height: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+}
+
+.container-footer .footer-icons {
+  width: 50%;
+  margin: 0 25%;
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 0.8px solid lightcyan;
+}
+
+.container-footer .footer-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+
+.container-footer .footer-icons ul a {
+  color: white;
+}
+
+.container-footer .footer-icons ul a:hover {
+  color: darkorange;
+}
+
+.container-footer .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 3rem;
+}
+
+.container-footer .footer-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container-footer .footer-address {
+  padding: 2rem;
+}
+
+.container-footer a {
+  color: #cc8400;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.container-footer a:hover {
+  color: whitesmoke;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.arrow a {
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 980px) {
+  .event {
+    width: 100vw;
+    padding-top: 2rem;
+    max-width: 100%;
+    position: relative;
+  }
+  .event .img-event {
+    width: 100vw;
+  }
+  .event .date {
+    border: 1px solid red;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 6rem;
+    height: 6rem;
+  }
+  .responsive {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .photoAbout {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .img-team {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .responsive {
+    width: 70vw;
+  }
+  .event {
+    width: 100vw;
+    padding-top: 2rem;
+    position: relative;
+  }
+  .event .img-event {
+    width: 100vw;
+    max-width: 100%;
+  }
+  .event .date {
+    margin-top: -10rem;
+    width: 6rem;
+    height: 6rem;
+    line-height: 70%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: absolute;
+    left: 5rem;
+    bottom: 3vw;
+  }
+  .event .date span {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

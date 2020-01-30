@@ -1,0 +1,106 @@
+.promo {
+    background-color: grey;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    padding: 3rem 0;
+    // start with background design
+    .background-image {
+        background: rgba(0, 0, 0, 0) url(/images/promotions/promotions_area_bg_1.jpg) no-repeat fixed 0 0 / cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        // display: none;
+        // width: 100vw;
+        // height: auto;
+        // position: relative;
+        // z-index: -1;
+    }
+    .background-image::after {
+        background: #000 none repeat scroll 0 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.7;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    // end of background design
+    h1,
+    h2,
+    h3,
+    .btn {
+        position: relative;
+        z-index: 1;
+    }
+    h2 {
+        @include h2;
+        color: darken( orange, 20);
+        font-size: 5rem;
+    }
+    h1 {
+        @include h1;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: white;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid black;
+    }
+    .special-row {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 2em;
+        z-index: 1;
+    }
+    // padding: ;
+    .special {
+        padding: 1rem;
+        text-align: center;
+        .img-team {
+            position: relative;
+        }
+        .price {
+            @include fontTwo;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+        img {
+            position: relative;
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+        h3 {
+            @include h2;
+            color: white;
+            font-size: 2.5rem;
+        }
+        .btn {
+            @include buttonTwo;
+            background-color: transparent;
+            text-align: center;
+        }
+        // .btn:focus,
+        .btn:hover {
+            background-color: #c1934c;
+            color: white;
+        }
+    }
+}
